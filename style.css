@@ -1,0 +1,198 @@
+:root {
+  /* Color Tokens */
+  --color-primary: #4f46e5;
+  --color-secondary: #7c3aed;
+  --color-background: #f9fafb;
+  --color-surface: #ffffff;
+  --color-text-primary: #111827;
+  --color-text-secondary: #6b7280;
+  --color-border: #e5e7eb;
+  --color-accent: #14b8a6;
+
+  /* Typography Tokens */
+  --font-family-heading: "Poppins", sans-serif;
+  --font-family-body: "Inter", sans-serif;
+
+  --font-size-h1: 32px;
+  --font-size-h2: 24px;
+  --font-size-body: 16px;
+  --font-size-small: 14px;
+  --font-size-button: 16px;
+
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  --line-height-h1: 40px;
+  --line-height-h2: 32px;
+  --line-height-body: 24px;
+  --line-height-small: 20px;
+  --line-height-button: 24px;
+
+  /* Spacing Tokens */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+  --spacing-2xl: 48px;
+
+  /* Radius */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-background);
+  color: var(--color-text-primary);
+  font-family: var(--font-family-body);
+  font-size: var(--font-size-body);
+  line-height: var(--line-height-body);
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: var(--spacing-2xl) var(--spacing-xl);
+}
+
+.eyebrow {
+  margin: 0 0 var(--spacing-sm);
+  color: var(--color-accent);
+  font-size: var(--font-size-small);
+  line-height: var(--line-height-small);
+  font-weight: var(--font-weight-medium);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+h1 {
+  margin: 0 0 var(--spacing-md);
+  font-family: var(--font-family-heading);
+  font-size: var(--font-size-h1);
+  line-height: var(--line-height-h1);
+  font-weight: var(--font-weight-bold);
+}
+
+h2 {
+  margin: 0 0 var(--spacing-sm);
+  font-family: var(--font-family-heading);
+  font-size: var(--font-size-h2);
+  line-height: var(--line-height-h2);
+  font-weight: var(--font-weight-semibold);
+}
+
+.body-text {
+  margin: 0 0 var(--spacing-xl);
+  color: var(--color-text-secondary);
+  max-width: 700px;
+}
+
+.small-text {
+  font-size: var(--font-size-small);
+  line-height: var(--line-height-small);
+  color: var(--color-text-secondary);
+  margin: 0;
+}
+
+.button-row {
+  display: flex;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-xl);
+  flex-wrap: wrap;
+}
+
+.primary-button,
+.secondary-button {
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-family-body);
+  font-size: var(--font-size-button);
+  line-height: var(--line-height-button);
+  font-weight: var(--font-weight-medium);
+  cursor: pointer;
+  border: 1px solid transparent;
+}
+
+.primary-button {
+  background-color: var(--color-primary);
+  color: #ffffff;
+}
+
+.secondary-button {
+  background-color: var(--color-surface);
+  color: var(--color-text-primary);
+  border-color: var(--color-border);
+}
+
+.card {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-lg);
+  margin-bottom: var(--spacing-xl);
+}
+
+.card p {
+  margin: 0;
+  color: var(--color-text-secondary);
+}
+
+.token-preview {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-lg);
+}
+
+.preview-box {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-lg);
+}
+
+.spacing-demo {
+  background-color: var(--color-primary);
+  color: white;
+  margin-bottom: var(--spacing-sm);
+  border-radius: var(--radius-sm);
+  font-size: var(--font-size-small);
+  line-height: var(--line-height-small);
+  padding-top: var(--spacing-xs);
+  padding-bottom: var(--spacing-xs);
+  text-align: center;
+}
+
+.spacing-demo.xs {
+  width: 60px;
+}
+
+.spacing-demo.sm {
+  width: 100px;
+}
+
+.spacing-demo.md {
+  width: 160px;
+}
+
+.spacing-demo.lg {
+  width: 220px;
+}
+
+@media (max-width: 700px) {
+  .token-preview {
+    grid-template-columns: 1fr;
+  }
+
+  .container {
+    padding: var(--spacing-xl) var(--spacing-md);
+  }
+}

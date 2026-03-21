@@ -2,48 +2,57 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Week 1 UI Refresher</title>
-    <link rel="stylesheet" href="css/styles.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Design Tokens Demo</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
   </head>
-
   <body>
-    <header class="intro">
-      <img src="images/profile.JPG" alt="Profile photo" class="profile" />
+    <div class="container">
+      <p class="eyebrow">Interactive Web Design II</p>
+      <h1>Design Tokens Demo</h1>
+      <p class="body-text">
+        This page shows my design tokens translated from Figma into CSS
+        variables using Visual Studio Code.
+      </p>
 
-      <div>
-        <h1>Benjamin Perez Sanjuan</h1>
-        <p>Interactive Web Design II</p>
-        <p>Week 1 UI Refresher</p>
+      <div class="button-row">
+        <button class="primary-button">Primary Button</button>
+        <button class="secondary-button">Secondary Button</button>
       </div>
-    </header>
 
-    <section class="typography">
-      <h1>Heading 1</h1>
-      <h2>Heading 2</h2>
-      <h3>Heading 3</h3>
-      <h4>Heading 4</h4>
-      <h5>Heading 5</h5>
-      <h6>Heading 6</h6>
+      <div class="card">
+        <h2>Card Title</h2>
+        <p>
+          This sample card uses the color, typography, and spacing tokens
+          defined in the design system.
+        </p>
+      </div>
 
-      <p>This is a paragraph example demonstrating body text.</p>
+      <div class="token-preview">
+        <div class="preview-box">
+          <h2>Typography Preview</h2>
+          <p class="small-text">
+            This is small helper text using the small type token.
+          </p>
+        </div>
 
-      <p class="small">Small Text</p>
-    </section>
-
-    <section class="card">
-      <p class="label">Small Label</p>
-
-      <h4>Heading 4</h4>
-
-      <p>This is a paragraph that spans multiple lines.</p>
-
-      <button>Button</button>
-    </section>
+        <div class="preview-box">
+          <h2>Spacing Preview</h2>
+          <div class="spacing-demo xs">XS</div>
+          <div class="spacing-demo sm">SM</div>
+          <div class="spacing-demo md">MD</div>
+          <div class="spacing-demo lg">LG</div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
-
-
-
-
-
-
